@@ -1,0 +1,50 @@
+ruby-org (0.9.12-2) unstable; urgency=medium
+
+  * Team upload.
+  * Tighten dependency on ruby-rubypants (for gitlab)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 19 Jul 2016 22:06:15 +0530
+
+ruby-org (0.9.12-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version. (Closes: #794275)
+  * Update Build-Depends.
+  * Remove obsolete patches.
+  * Update and fix debian/README.source.
+  * Add a patch to fix a missing require in the test suite.
+  * Follow renaming of upstream documentation.
+  * Switch to debhelper compat level 9.
+  * Bump Standards-Version, no changes required.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Wed, 16 Sep 2015 18:56:40 +0200
+
+ruby-org (0.9.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add add_skip_syntax_highlight.patch to add a :skip_syntax_highlight
+    option to the parser.
+
+ -- Cédric Boutillier <boutil@debian.org>  Wed, 16 Apr 2014 16:49:33 +0200
+
+ruby-org (0.9.1-1) unstable; urgency=medium
+
+  [ Jonas Genannt ]
+  * Team upload.
+  * Imported Upstream version 0.9.1
+  * d/control:
+    - bumped standards version to 3.9.5 (no changes needed)
+    - updated git urls to correct git repo
+    - added ruby-coderay as suggests for html output code highlighting
+  * d/copyright: added myself to copyright
+
+  [ Cédric Boutillier ]
+  * Install README.rdoc as documentation
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sun, 23 Feb 2014 21:54:58 +0100
+
+ruby-org (0.8.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #703283)
+
+ -- Jérémy Bobbio <lunar@debian.org>  Fri, 09 Aug 2013 19:13:51 +0200

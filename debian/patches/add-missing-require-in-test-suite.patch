@@ -1,0 +1,14 @@
+Description: add missing require in test suite
+Author: Jérémy Bobbio <lunar@debian.org>
+Last-Update: 2015-09-16
+
+diff --git a/spec/parser_spec.rb b/spec/parser_spec.rb
+index 6c83d7b..55aeb20 100644
+--- a/spec/parser_spec.rb
++++ b/spec/parser_spec.rb
+@@ -1,4 +1,5 @@
+ require 'spec_helper'
++require 'pathname'
+ 
+ describe Orgmode::Parser do
+   it "should open ORG files" do

@@ -1,0 +1,32 @@
+Source: ruby-org
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Per Andersson <avtobiff@gmail.com>,
+           Jérémy Bobbio <lunar@debian.org>
+Build-Depends: debhelper (>= 9),
+               gem2deb,
+               rake,
+               ruby-rspec (>= 3),
+               ruby-rubypants (>= 0.2.0-2~),
+               ruby-tilt
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/ruby-org.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-org.git
+Homepage: https://github.com/bdewey/org-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-org
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-rubypants (>= 0.2.0-2~),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Suggests: ruby-coderay
+Description: Emacs org-mode parser for Ruby
+ An Emacs org-mode parser written in Ruby. The most significant thing this
+ library does today is convert org-mode files to HTML or Textile. Currently,
+ you cannot do much to customize the conversion. The supplied textile
+ conversion is optimized for extracting "content" from the orgfile as opposed
+ to "metadata."

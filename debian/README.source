@@ -1,0 +1,36 @@
+Debian packaging for org-ruby
+=============================
+
+This package is named "ruby-org" and not "org-ruby" to follow the conventions
+from the Debian pkg-ruby-extras policy.
+
+Upstream source requires manual handling as:
+
+ * upstream tarballs do not contain all files in their preferred form of
+   modifications,
+ * upstream is using Git.
+
+Creating an updated package for a new upstream release goes as:
+
+0. Add a remote with upstream repository if not already done:
+
+    $ git remote add github-upstream https://github.com/bdewey/org-ruby
+
+1. Fetch new commits from upstream repository:
+
+    $ git fetch upstream
+
+2. Verify the tag for the new version:
+
+    $ git tag -v version-$VERSION
+
+3. Tag and merge new upstream version:
+
+    $ git tag upstream/$VERSION version-$VERSION
+    $ git merge upstream/$VERSION
+
+4. Hack, improve, update debian/changelog…
+
+5. Build a new package:
+
+    $ gbp buildpackage --git-pristine-tar --git-pristine-tar-commit
